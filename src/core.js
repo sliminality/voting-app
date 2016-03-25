@@ -46,11 +46,11 @@ export function next (state) {
   }
 }
 
-// State, Entry -> State
+// Vote, Entry -> Vote
 // Adds a tally field to the vote map
-export function vote (state, entry) {
-  return state.updateIn(
-    ['vote', 'tally', entry],
+export function vote (voteState, entry) {
+  return voteState.updateIn(
+    ['tally', entry],
     0,
     currentEntryTally => currentEntryTally + 1
   );
