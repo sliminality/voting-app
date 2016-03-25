@@ -1,0 +1,37 @@
+{
+  "name": "voting-server",
+  "version": "1.0.0",
+  "description": "full stack react tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive",
+    "test:watch": "npm run test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarahlim/voting-server.git"
+  },
+  "keywords": [],
+  "author": "Sarah Lim <sarah@sarahlim.com> (http://sarahlim.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarahlim/voting-server/issues"
+  },
+  "homepage": "https://github.com/sarahlim/voting-server#readme",
+  "devDependencies": {
+    "babel-cli": "^6.6.5",
+    "babel-core": "^6.7.4",
+    "babel-preset-es2015": "^6.6.0",
+    "chai": "^3.5.0",
+    "chai-immutable": "^1.5.4",
+    "mocha": "^2.4.5"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "dependencies": {
+    "immutable": "^3.7.6"
+  }
+}
