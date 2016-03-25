@@ -1,2 +1,2 @@
-# voting-server
+# voting-app
 full stack react tutorial
