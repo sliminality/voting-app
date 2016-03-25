@@ -15,10 +15,6 @@
   "keywords": [],
   "author": "Sarah Lim <sarah@sarahlim.com> (http://sarahlim.com)",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sarahlim/voting-app/issues"
-  },
-  "homepage": "https://github.com/sarahlim/voting-app#readme",
   "devDependencies": {
     "babel-cli": "^6.6.5",
     "babel-core": "^6.7.4",
