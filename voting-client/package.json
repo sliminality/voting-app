@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js \"test/**/*@(.js|.jsx)\"",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch --watch-extensions jsx"
   },
   "keywords": [],
   "author": "Sarah Lim <sarah@sarahlim.com> (http://sarahlim.com)",
@@ -32,6 +32,7 @@
   "dependencies": {
     "immutable": "^3.7.6",
     "react": "^0.14.7",
+    "react-addons-test-utils": "^0.14.7",
     "react-dom": "^0.14.7"
   }
 }

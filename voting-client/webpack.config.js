@@ -8,7 +8,7 @@ module.exports = {
     'webpack/hot/only-dev-server',
 
     // Find index.js entry point
-    './src/index.js'
+    './src/index.jsx'
   ],
 
   // Make sure Webpack finds .jsx files and .js files, and Babelifies both
