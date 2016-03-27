@@ -6,7 +6,12 @@ import {setEntries, next, vote} from '../src/core';
 
 describe('application logic', () => {
 
+  /*****************************************************/
+  /*****************************************************/
+
   describe('setEntries', () => {
+
+    /*****************************************************/
 
     it('adds the entries to the state', () => {
       const state = Map();
@@ -18,7 +23,11 @@ describe('application logic', () => {
       }));
     });
 
-    // Allow input entries to be a regular JS iterable. Make it an Immutable List by the time it's in the state tree.
+    /*****************************************************/
+
+    // Allow input entries to be a regular JS iterable
+    // Make it an Immutable List by the time it's in the state tree
+
     it('converts to immutable', () => {
       const state = Map();
       const entries = ['Trainspotting', '28 Days Later'];
@@ -30,7 +39,12 @@ describe('application logic', () => {
 
   });
 
+  /*****************************************************/
+  /*****************************************************/
+
   describe('next', () => {
+
+    /*****************************************************/
 
     it('takes the next two entries under vote', () => {
       const state = Map({
@@ -44,6 +58,8 @@ describe('application logic', () => {
         entries: List.of('Sunshine')
       }));
     });
+
+    /*****************************************************/
 
     it('puts winner of current vote back to entries', () => {
       const state = Map({
@@ -65,6 +81,8 @@ describe('application logic', () => {
       }));
     });
 
+    /*****************************************************/
+
     it('puts both from tied vote back to entries', () => {
       const state = Map({
         vote: Map({
@@ -85,6 +103,8 @@ describe('application logic', () => {
       }));
     });
 
+    /*****************************************************/
+
     it('marks winner when just one entry left', () => {
       const state = Map({
         vote: Map({
@@ -104,7 +124,12 @@ describe('application logic', () => {
 
   });
 
+  /*****************************************************/
+  /*****************************************************/
+
   describe('vote', () => {
+
+    /*****************************************************/
 
     it('creates a tally for the voted entry', () => {
       const state = Map({
@@ -118,6 +143,8 @@ describe('application logic', () => {
         })
       }));
     });
+
+    /*****************************************************/
 
     it('adds to existing tally for the voted entry', () => {
       const state = Map({

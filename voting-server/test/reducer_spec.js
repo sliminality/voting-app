@@ -5,7 +5,9 @@ import reducer from '../src/reducer';
 
 describe('reducer', () => {
 
+  /*****************************************************/
   // Correctly delegate actions
+  /*****************************************************/
   
   it('handles SET_ENTRIES', () => {
     const initialState = Map();
@@ -51,7 +53,10 @@ describe('reducer', () => {
     }));
   });
 
+  /*****************************************************/
   // Handle undefined state as if an empty Map had been given
+  /*****************************************************/
+
   it('has an initial state', () => {
     const action = {type: 'SET_ENTRIES', entries: ['Trainspotting']};
     const nextState = reducer(undefined, action);
@@ -60,7 +65,10 @@ describe('reducer', () => {
     }));
   });
 
+  /*****************************************************/
   // Fulfills the contract of a reduce callback function
+  /*****************************************************/
+
   it('can be used with Array.prototype.reduce', () => {
     const actions = [
       {type: 'SET_ENTRIES', entries: ['Trainspotting', '28 Days Later']},

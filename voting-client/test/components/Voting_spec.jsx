@@ -5,10 +5,12 @@ import {
   scryRenderedDOMComponentsWithTag,
   Simulate
 } from 'react-addons-test-utils';
-import Voting from '../../src/components/Voting';
 import {expect} from 'chai';
 
+import Voting from '../../src/components/Voting';
+
 describe('Voting', () => {
+
   it('renders a pair of buttons', () => {
     const component = renderIntoDocument(
       <Voting pair={['Trainspotting', '28 Days Later']} />
@@ -20,6 +22,8 @@ describe('Voting', () => {
     expect(buttons[0].textContent).to.equal('Trainspotting');
     expect(buttons[1].textContent).to.equal('28 Days Later');
   });
+
+  /*****************************************************/
 
   it('invokes a callback when a button is clicked', () => {
     let votedWith;
@@ -37,6 +41,8 @@ describe('Voting', () => {
     expect(votedWith).to.equal('Trainspotting');
   });
 
+  /*****************************************************/
+
   it('disables buttons when the user has voted', () => {
     const component = renderIntoDocument(
       <Voting pair={['Trainspotting', '28 Days Later']}
@@ -49,6 +55,8 @@ describe('Voting', () => {
     expect(buttons[1].hasAttribute('disabled')).to.equal(true);
   });
 
+  /*****************************************************/
+
   it('adds label to the voted entry', () => {
     const component = renderIntoDocument(
       <Voting pair={['Trainspotting', '28 Days Later']}
@@ -58,6 +66,8 @@ describe('Voting', () => {
 
     expect(buttons[0].textContent).to.contain('Voted');
   });
+
+  /*****************************************************/
 
   it('renders just the winner when there is one', () => {
     const component = renderIntoDocument(
@@ -70,4 +80,5 @@ describe('Voting', () => {
     expect(winner).to.be.ok;
     expect(winner.textContent).to.contain('Trainspotting');
   });
+
 });
